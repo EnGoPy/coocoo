@@ -1,0 +1,20 @@
+server:
+  port: 9005
+
+spring:
+  application:
+    name: whatsapp-com
+  profiles:
+    active: native
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      fail-fast: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
